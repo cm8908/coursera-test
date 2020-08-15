@@ -4,3 +4,193 @@ body {
   background-color: #1172CC;
   font-family: 'Baloo Tamma 2', cursive;
 }
+
+.container {
+	width: 70%;
+}
+
+#header-nav {
+	background-color: #EB6A2D;
+	border-radius: 0;
+	border: 0;
+}
+
+#logo-img {
+	background: url("../images/logo.png");
+	width: 192px;
+	height: 108px;
+	margin: 10px 15px 10px 0;
+}
+
+.navbar-brand {
+	padding-top: 25px;
+}
+
+.navbar-brand h1 {
+	font-family: 'Suez One', serif;
+	color: black;
+	font-size: 2.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px #9C9C9C;
+	margin-top: 4;
+	margin-bottom: 0;
+	line-height: 1;
+}
+
+.navbar-brand a:hover, .navbar-brand a:focus {
+	text-decoration: none;
+}
+
+.navbar-brand p {
+	color: black;
+}
+
+.navbar-brand p span {
+	vertical-align: middle;
+}
+
+#nav-list {
+	margin-top: 20px;
+}
+
+#nav-list a {
+	color: #003C75;
+	text-align: center;
+}
+
+#nav-list a:hover {
+	background: #E7E7E7;
+}
+
+#nav-list a span {
+	font-size: 1.3em;
+}
+
+#phone {
+	margin-top: 5px;
+}
+#phone a {
+	text-align: right;
+	padding-bottom: 0;
+}
+#phone div {
+	color: #00FF8C;
+	text-align: right;
+	padding-right: 15px;
+}
+
+/*.blinking {
+	animation:blinklingText 1.2s infinite;
+}
+@keyframes blinkingText {
+	0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}*/
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+	border: 1px solid #1172CC;
+}
+
+.navbar-header button.navbar-toggle {
+	clear: both;
+	/*margin-top: -30px;*/
+}
+
+/*END HEADER*/
+
+/*Large*/
+@media (min-width: 1200px) {
+	
+}
+
+/*Medium*/
+@media (min-width: 1075px) and (max-width: 1199px) {
+	#logo-img {
+		background: url("../images/logo-medium.png");
+		width: 128px;
+		height: 72px;
+		margin: 5px 5px 5px 0;
+	}
+	.navbar-brand {
+		padding-top: 5px;
+	}
+	.navbar-brand h1 {
+		font-size: 2em;
+		/*vertical-align: middle*/;
+	}
+	.navbar-brand p {
+		/*font-size: .7em;*/
+	}
+}
+
+/*Where the logo doesn't show up anymore*/
+@media (min-width: 992px) and (max-width: 1074px) {
+	#logo-img {
+		display: none;
+	}
+	.navbar-brand {
+		padding-top: 5px;
+	}
+	.navbar-brand h1 {
+		font-size: 2em;
+		/*vertical-align: middle*/;
+	}
+}
+
+/*여기서부터 2em이던 .navbar-brand h1가 2.5em으로 복구됨*/
+/*이 아래로 변화 적용 안되는듯*/
+@media (min-width: 912px) and (max-width: 991) {
+	/*.container {
+		width: 912px;
+	}*/
+	#logo-img {
+		display: none;
+	}
+	.navbar-brand {
+		padding-top: 5px;
+	}
+	.navbar-brand h1 {
+		font-size: 2em;
+		/*vertical-align: middle*/;
+	}
+}
+
+/*Small*/
+@media (min-width: 768px) and(max-width: 911px) {
+	#logo-img {
+		display: none;
+	}
+	.navbar-brand {
+		padding-top: 5px;
+	}
+	.navbar-brand h1 {
+		font-size: 2em;
+		/*vertical-align: middle*/;
+	}
+}
+
+/*X-small*/
+@media (max-width: 767) {
+	#logo-img {
+		display: none;
+	}
+	.navbar-brand {
+		padding-top: 5px;
+	}
+	.navbar-brand h1 {
+		font-size: 2em;
+		/*vertical-align: middle*/;
+	}
+
+	#collapsable-nav a {
+		font-size: 1.2em;
+	}
+
+	#collapsable-nav a span {
+		font-size: 1em;
+	}
+}
