@@ -5,7 +5,7 @@ body {
   font-family: 'Baloo Tamma 2', cursive;
 }
 
-.container {
+nav .container {
 	width: 70%;
 }
 
@@ -99,13 +99,67 @@ body {
 	clear: both;
 	/*margin-top: -30px;*/
 }
-
-
 /*END HEADER*/
+
+/*HOME Page*/
+#call-btn a{
+	color: black;
+	font-size: 1.3em;
+	display: block;
+    margin: 0 20px;
+    margin-bottom: 15px;
+    padding: 5px;
+    padding-bottom: 0;
+    border: 2px solid #fff;
+    background-color: #f6b319;
+}
+
+#menu-tile, #specials-tile, #map-tile {
+	height: 250px;
+	width: 100%;
+	margin-bottom: 15px;
+	position: relative;
+	border: 2px solid #EB6A2D;
+	overflow: hidden;
+}
+
+#menu-tile:hover, #specials-tile:hover, #map-tile:hover {
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+
+#menu-tile {
+	background: url('../images/menu-tile.jpg') no-repeat;
+	background-position: center;
+}
+
+#specials-tile {
+	background: url('../images/specials-tile.jpg') no-repeat;
+	background-position: center;
+}
+
+#menu-tile span, #specials-tile span, #map-tile span {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.6em;
+  text-transform: uppercase;
+  background-color: #000;
+  color: #fff;
+  opacity: .8;
+}
+
+/*END HOME Page*/
 
 /*Large*/
 @media (min-width: 1200px) {
-	
+	.jumbotron {
+		background: url('../images/jumbotron_wide.jpg') no-repeat;
+		height: 798px;
+		box-shadow: 0 0 50px #619CD2;
+		border: 2px solid #EB6A2D;
+	}
 }
 
 /*Medium*/
@@ -126,6 +180,13 @@ body {
 	.navbar-brand p {
 		/*font-size: .7em;*/
 	}
+
+	.jumbotron {
+		background: url('../images/jumbotron_medium.jpg') no-repeat;
+		height: 660px;
+		box-shadow: 0 0 50px #619CD2;
+		border: 2px solid #EB6A2D;
+	}
 }
 
 /*Where the logo doesn't show up anymore*/
@@ -139,8 +200,31 @@ body {
 	.navbar-brand h1 {
 		font-size: 2em;
 	}
-	.container {
+	nav .container {
 		width: 100%;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1074px) {
+	.jumbotron {
+		background: url('../images/jumbotron_medium.jpg') no-repeat;
+		height: 660px;
+		box-shadow: 0 0 50px #619CD2;
+		border: 2px solid #EB6A2D;
+	}
+}
+
+@media (min-width: 490px) and (max-width: 767px) {
+	.container .jumbotron {
+		margin-top: 30px;
+		padding: 0;
+		box-shadow: 0 0 50px #619CD2;
+		border: 2px solid #EB6A2D;
+	}
+
+	#menu-tile, #specials-tile {
+		width: 100%;
+		margin: 0 auto 15px;
 	}
 }
 
@@ -149,16 +233,57 @@ body {
 		font-size: 1.5em;
 		text-transform: none;
 	}
-	.container {
+	nav .container {
 		width: 100%;
 	}
 	.navbar-brand {
 		padding: 0;
 	}
+
+	.container .jumbotron {
+		margin-top: 30px;
+		padding: 0;
+		box-shadow: 0 0 50px #619CD2;
+		border: 2px solid #EB6A2D;
+	}
+
+	#menu-tile, #specials-tile {
+		width: 100%;
+		margin: 0 auto 15px;
+	}
+	
 }
+
+
+
+
+
 /*Neon effect on "delivery available"*/
+
+.neon {
+  color: #FB4264;
+  text-shadow: 0 0 3vw #F40A35;
+}
+
+.neon {
+  animation: neon 1s ease infinite;
+  -moz-animation: neon 1s ease infinite;
+  -webkit-animation: neon 1s ease infinite;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+    color: #FED128;
+  }
+  50% {
+    text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+    color: #806914;
+  }
+}
+
 .flux {
-  font-family: neon;
   text-shadow: 0 0 3vw #2356FF;
 }
 
