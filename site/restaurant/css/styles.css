@@ -100,6 +100,7 @@ body {
 	/*margin-top: -30px;*/
 }
 
+
 /*END HEADER*/
 
 /*Large*/
@@ -120,7 +121,7 @@ body {
 	}
 	.navbar-brand h1 {
 		font-size: 2em;
-		/*vertical-align: middle*/;
+		/*vertical-align: middle*/
 	}
 	.navbar-brand p {
 		/*font-size: .7em;*/
@@ -128,7 +129,7 @@ body {
 }
 
 /*Where the logo doesn't show up anymore*/
-@media (min-width: 992px) and (max-width: 1074px) {
+@media (min-width: 490px) and (max-width: 1074px) {
 	#logo-img {
 		display: none;
 	}
@@ -137,60 +138,21 @@ body {
 	}
 	.navbar-brand h1 {
 		font-size: 2em;
-		/*vertical-align: middle*/;
+	}
+	.container {
+		width: 100%;
 	}
 }
 
-/*여기서부터 2em이던 .navbar-brand h1가 2.5em으로 복구됨*/
-/*이 아래로 변화 적용 안되는듯*/
-@media (min-width: 912px) and (max-width: 991) {
-	/*.container {
-		width: 912px;
-	}*/
-	#logo-img {
-		display: none;
+@media (max-width: 489px) {
+	.navbar-brand h1 {
+		font-size: 1.5em;
+		text-transform: none;
+	}
+	.container {
+		width: 100%;
 	}
 	.navbar-brand {
-		padding-top: 5px;
-	}
-	.navbar-brand h1 {
-		font-size: 2em;
-		/*vertical-align: middle*/;
-	}
-}
-
-/*Small*/
-@media (min-width: 768px) and(max-width: 911px) {
-	#logo-img {
-		display: none;
-	}
-	.navbar-brand {
-		padding-top: 5px;
-	}
-	.navbar-brand h1 {
-		font-size: 2em;
-		/*vertical-align: middle*/;
-	}
-}
-
-/*X-small*/
-@media (max-width: 767) {
-	#logo-img {
-		display: none;
-	}
-	.navbar-brand {
-		padding-top: 5px;
-	}
-	.navbar-brand h1 {
-		font-size: 2em;
-		/*vertical-align: middle*/;
-	}
-
-	#collapsable-nav a {
-		font-size: 1.2em;
-	}
-
-	#collapsable-nav a span {
-		font-size: 1em;
+		padding: 0;
 	}
 }
