@@ -4,7 +4,7 @@ You can use the [editor on GitHub](https://github.com/cm8908/coursera-test/edit/
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
-To the testing site : (https://cm8908.github.io/coursera-test/site)
+To the testing site : https://cm8908.github.io/coursera-test/site/index.html
 
 ### Markdown
 
