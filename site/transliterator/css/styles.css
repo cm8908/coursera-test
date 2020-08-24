@@ -21,6 +21,7 @@ ul {
 
 .thirdbox#BoxContainer {
 	border: 1px black solid;
+	writing-mode: vertical-lr;
 }
 
 
