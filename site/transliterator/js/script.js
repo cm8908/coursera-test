@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded",
 					outputText[i] = "ᠠ";
 				} else if (inputText[i] == " ") {
 					outputText[i] = " ";
+				} else if (inputText[i] == "\n") {
+					outputText[i] = " ";
 				} else if (inputText[i] == "e") {
 					outputText[i] = "ᡝ";
 				} else if (inputText[i] == "i") {
