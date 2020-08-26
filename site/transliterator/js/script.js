@@ -1,25 +1,59 @@
 document.addEventListener("DOMContentLoaded",
+
 	function (event) {
+
+		document.querySelector("#copybtn").addEventListener("click", function() {
+			var tempElm = document.createElement('textarea');
+			tempElm.value = document.getElementById("OutputTextBox").textContent;
+			document.body.appendChild(tempElm);
+
+			tempElm.select();
+			document.execCommand("copy");
+			document.body.removeChild(tempElm);
+		});
+
+		document.querySelector("#letterhide").addEventListener("click", function () {
+			var row = document.getElementById("rowforletterbox");
+
+			if (row.style.display === "block") {
+				row.style.display = "none";
+			} else {
+				row.style.display = "block";
+			}
+
+		});
+
+		// var isHidden = false;
+
+		// function letterHide (event) {
+
+		// 	var isHidden = window.isHidden;
+
+		// 	if (isHidden === true) {
+		// 		document.getElementById("rowforletters").style.display="block"
+		// 		isHidden = false;
+		// 		console.log(isHidden);
+		// 	} else {
+		// 		document.getElementById("rowforletters").style.display="none"
+		// 		window.isHidden = true;
+		// 	}
+		// }
+
+		// function hideshow (event) {
+
+		// 	var row = document.getElementById("rowforletterbox");
+
+		// 	 if (row.style.display === "none") {
+		// 		    row.style.display = "block";
+		// 		  } else {
+		// 		    row.style.display = "none";
+		// 		  }
+		// }
+
 
 		function TL (event) {
 			var inputText = document.getElementById("input").value;
 			var outputText = new Array();
-
-
-			//  NOT AVAILABLE FOR NOW
-
-			// var latin = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " "];
-			// var manchu = ["ᠠ", "ᠪ᠊", "ᠴ᠊", "ᡩ᠊", "ᡝ", "ᡶ‍", "ᡤ᠊", "ᡥ᠊", "ᡳ", "ᠵ᠊", "ᡴ᠊", "ᠯ᠊", "ᠮ᠊", "ᠨ᠊", "ᠣ", "ᡦ᠊", "q", "ᡵ᠊", "ᠰ", "ᡨ᠋᠊", "ᡠ", "ᡡ", "ᠸ᠊", "ᡧ᠊", "ᠶ᠊", "z", " "];
-
-			// for (var i = 0; i < inputText.length; i++) {
-			// 	for (var j = 0; latin.length; j++) {
-			// 		if(inputText[i] === latin[j]) {
-			// 			outputText[i] = manchu[j];
-			// 		}
-			// 	}
-			// }
-
-			//  NOT AVAILABLE FOR NOW
 
 			for (var i = 0; i < inputText.length; i++) {
 				if (inputText[i] == "a") {
@@ -28,6 +62,10 @@ document.addEventListener("DOMContentLoaded",
 					outputText[i] = " ";
 				} else if (inputText[i] == "\n") {
 					outputText[i] = " ";
+				} else if (inputText[i] == ".") {
+					outputText[i] = "᠉";
+				} else if (inputText[i] == ",") {
+					outputText[i] = "᠈";
 				} else if (inputText[i] == "e") {
 					outputText[i] = "ᡝ";
 				} else if (inputText[i] == "i") {
@@ -53,7 +91,28 @@ document.addEventListener("DOMContentLoaded",
 				} else if (inputText[i] == "p") {
 					outputText[i] = "ᡦ";
 				} else if (inputText[i] == "c") {
-					outputText[i] = "ᠴ";
+					if (inputText[i+1] == "\'") {
+						if(inputText[i+2] == "y") {
+							outputText[i] = "ᡱᡳ";
+							outputText[i+1] = "";
+							outputText[i+2] = "";
+							i += 2;
+						} else {
+							outputText[i] = "ᡱ";
+							outputText[i+1] = "";
+							i += 1; }
+						} else if (inputText[i+1] == "h") {
+						if(inputText[i+2] == "i") {
+							outputText[i] = "ᡱᡳ";
+							outputText[i+1] = "";
+							outputText[i+2] = "";
+							i += 2;
+						} else {
+							outputText[i] = "ᡱ";
+							outputText[i+1] = "";
+							i += 1; }
+						}
+						else { outputText[i] = "ᠴ"; }
 				} else if (inputText[i] == "j") {
 					if (inputText[i+1] == "y") {
 						outputText[i] = "ᡷᡳ";
@@ -91,7 +150,18 @@ document.addEventListener("DOMContentLoaded",
 				} else if (inputText[i] == "l") {
 					outputText[i] = "ᠯ";
 				} else if (inputText[i] == "t") {
-					outputText[i] = "ᡨ";
+					if (inputText[i+1] == "s") {
+						if(inputText[i+2] == "\'") {
+							outputText[i] = "ᡮ";
+							outputText[i+1] = "";
+							outputText[i+2] = "";
+							i += 2;
+						} else {
+							outputText[i] = "ᡮᡟ";
+							outputText[i+1] = "";
+							i += 1; 
+						}
+					} else { outputText[i] = "ᡨ"; }
 				} else if (inputText[i] == "d") {
 					if (inputText[i+1] == "z") {
 						outputText[i] = "ᡯ";
@@ -125,10 +195,7 @@ document.addEventListener("DOMContentLoaded",
 							i += 1; 
 						}
 					} else { outputText[i] = "ᡰ"; }
-				} 
-
-				
-				
+				} 	
 			}
 
 			var result = "";
@@ -145,8 +212,12 @@ document.addEventListener("DOMContentLoaded",
 
 		}
 
-		document.querySelector("button")
+		document.querySelector("button#tl")
 				.addEventListener("click", TL);
+
+		// document.querySelector("button#letterhide")
+		// 		.addEventListener("click", hideshow());
+
 
 		window.addEventListener("keyup", function(event) {
 			if (event.keyCode == 13) {
