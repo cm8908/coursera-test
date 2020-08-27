@@ -38,25 +38,30 @@ document.addEventListener("DOMContentLoaded",
 
 
 		// Copying letter from the list
-		var manchu = new Array("ᠠ", "ᡝ", "ᡳ", "ᠣ", "ᡠ", "ᡡ", "ᠨ", "ᠩ", "ᡴ", "ᡤ", "ᡥ", "ᠪ", "ᡦ", "ᠰ", "ᡧ", "ᡨ", "ᡩ", "ᠯ", "ᠮ", "ᠴ", "ᠵ", "ᠶ", "ᡵ", "ᡶ", "ᠸ", "ᠺ", "ᡬ", "ᡭ", "ᡮ", "ᡮᡟ", "ᡯ", "ᡰ", "ᠰᡟ", "ᡱ", "ᡱᡳ", "ᡷ", "ᡷᡳ");
-		console.log(manchu.length);
+		var manchu = new Array("ᠠ", "ᡝ", "ᡳ", "ᠣ", "ᡠ", "ᡡ", "ᠨ", "ᠩ", "ᡴ", "ᡤ", "ᡥ", "ᠪ", "ᡦ", "ᠰ", "ᡧ", "ᡨ", "ᡩ", "ᠯ", "ᠮ", "ᠴ", "ᠵ", "ᠶ", "ᡵ", "ᡶ", "ᠸ", "ᠺ", "ᡬ", "ᡭ", "ᡮ", "ᡮᡟ", "ᡯ", "ᡰ", "ᠰᡟ", "ᡱ", "ᡱᡳ", "ᡷ", "ᡷᡳ", " ", "᠉", "᠈");
+
 		for (var i = 0; i<manchu.length; i++) {
 
 			document.querySelector("[char_attr='"+ manchu[i] +"']").addEventListener("click", function() {
-				// var tempElm = document.createElement('textarea');
-				var tempElm = document.querySelector("#letterputhere");
-				tempElm.value += $(this).attr("char_attr");
+				
+				var chkAbove = document.getElementById("above");
+				var chkBelow = document.getElementById("below");
 
-				if (document.querySelector("#OutputTextBox").textContent === "Output Here") {
-					document.querySelector("#OutputTextBox").textContent = "";
+				if (chkBelow.checked) {
+					var tempElm = document.querySelector("#letterputhere");
+					tempElm.value += $(this).attr("char_attr");
 				}
-				document.querySelector("#OutputTextBox").textContent += $(this).attr("char_attr");
-				console.log($(this).attr("char_attr"));
-				// document.body.appendChild(tempElm);
 
-				// tempElm.select();
-				// document.execCommand("copy");
-				// document.body.removeChild(tempElm);
+				
+				if (chkAbove.checked) {
+					if (document.querySelector("#OutputTextBox").textContent === "Output Here") {
+						document.querySelector("#OutputTextBox").textContent = "";
+					}
+					document.querySelector("#OutputTextBox").textContent += $(this).attr("char_attr");
+					console.log($(this).attr("char_attr"));
+				}
+				
+
 			});
 
 		}
@@ -220,6 +225,10 @@ document.addEventListener("DOMContentLoaded",
 							i += 1; 
 						}
 					} else { outputText[i] = "ᡰ"; }
+				}
+
+				if (outputText[i] == undefined) {
+					outputText[i] = "";
 				} 	
 			}
 
@@ -228,8 +237,6 @@ document.addEventListener("DOMContentLoaded",
 			for (i = 0; i < outputText.length; i++) {
 				result += outputText[i];
 			}
-			console.log(result);
-			console.log(inputText);
 
 
 			document.getElementById("OutputTextBox")

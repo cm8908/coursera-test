@@ -14,11 +14,19 @@
 
 	<div class="container">
 		<div class="row">
+			
+		</div>
+		<div class="row">
 			<div class="col-lg-5" id="BoxContainer"><textarea id="input"></textarea></div>
 			<div class="col-lg-2" id="BoxContainer"><button id="tl">Latin > Manchu</button><br><button id="copybtn">Copy Manchu</button><button id="clearbtn">Clear</button></div>
 			<div class="col-lg-5 thirdbox" id="BoxContainer"><div id="OutputTextBox">Output Here</div></div>
 		</div>
-		<div class="row"><button id="hidebtn">Hide/Show</button></div>
+		<div class="row"><button id="hidebtn">Hide/Show</button><form id="checkboxes"><p>Click the buttons to print characters on the box
+																	<input type="checkbox" id="above" name="above" value="above" checked="checked">
+																	<label for="above">above</label>
+																	<input type="checkbox" id="below" name="below" value="below" checked="checked">
+																	<label for="below">below</label>
+																</form> </div>
 
 
 		<div class="row" id="rowforletterbox">
@@ -59,6 +67,9 @@
 			<div id="letterbox" class="letterbox"><div char_attr="ᡱᡳ" id="lettercpy"><a>ᡱᡳ</a></div><div id="latinlit">c'y / chi</div></div>
 			<div id="letterbox" class="letterbox"><div char_attr="ᡷ" id="lettercpy"><a>ᡷ</a></div><div id="latinlit">zh</div></div>
 			<div id="letterbox" class="letterbox"><div char_attr="ᡷᡳ" id="lettercpy"><a>ᡷᡳ</a></div><div id="latinlit">jy / zhi</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr=" " id="lettercpy"><a> </a></div><div id="latinlit">SPACE</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="᠉" id="lettercpy"><a>᠉</a></div><div id="latinlit">Period</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="᠈" id="lettercpy"><a>᠈</a></div><div id="latinlit">Comma</div></div>
 			<div id="con_letterputhere"><textarea id="letterputhere"></textarea></div>
 			<button id="copybtn2">Copy</button><button id="clearbtn2">Clear</button>
 		</div>
@@ -66,11 +77,21 @@
 
 		<div id="FootList" class="row">
 			<ul>
-				<li>
-					<a id="Back" href="../index.html">Back to main index</a>
+				<li>The only characters you can type as input are followings:
+					<ul>
+						<li>Alphabets that are listed above</li>
+						<li>Punctuation marks: period(.) and comma(,)</li>
+						<li>Blank space and line break</li>
+					</ul>
 				</li>
 				<li>
-					Do not type characters other than the ones from the list above, punctuation marks period(.) and comma(,) and blank space.<br>The output will be printing "undefined".
+					Any other undefined characters will not be printed
+				</li>
+				<li>
+					<a id="github" href="https://github.com/cm8908/coursera-test">Feedback/Issues → GitHub</a>
+				</li>
+				<li>
+					Contact → jungminseob2@gmail.com
 				</li>
 			</ul>
 		</div>

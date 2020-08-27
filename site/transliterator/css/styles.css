@@ -76,6 +76,10 @@ ul {
 	padding: 20px 0 20px;
 }
 
+#tl {
+	margin-top: 10px;
+}
+
 #copybtn {
 /*	position: relative;
 	top: 5px;*/
@@ -117,6 +121,11 @@ ul {
 #input {
 	width: 100%;
 	height: 100%;
+}
+
+#checkboxes {
+	margin-left: 10px;
+	margin-bottom: -10px;
 }
 
 button {
