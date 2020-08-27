@@ -12,12 +12,15 @@ ul {
 	margin-top: 50px;
 }
 
+/*container for the whole line*/
 #letterbox {
+	float: left;
 	background-color: #DCDCDC;
 	/*border: 2px solid gray;*/
 	margin: 5px;
 }
 
+/*square container for manchu character*/
 #lettercpy {
 	float: left;
 	font-size: 2em;
@@ -28,12 +31,24 @@ ul {
 	width: 35px;
 }
 
+#lettercpy:hover {
+	cursor: pointer;
+}
+
+#lettercpy:active {
+	border: 2px solid black;
+}
+
+#lettercpy:click
+
+/*manchu character*/
 #lettercpy a {
 	position: relative;
 	right: 9px;
 	top: 3px;
 }
 
+/*latin character for manchu one*/
 #latinlit {
 	float: left;
 	margin: -5px 20px 5px 10px;
@@ -41,7 +56,8 @@ ul {
 }
 
 #rowforletterbox {
-	/*height: 200px;*/
+	display: none;
+	float: left;
 }
 
 .row {

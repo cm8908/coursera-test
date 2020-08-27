@@ -2,6 +2,9 @@ document.addEventListener("DOMContentLoaded",
 
 	function (event) {
 
+
+
+		// Manchu output copy button
 		document.querySelector("#copybtn").addEventListener("click", function() {
 			var tempElm = document.createElement('textarea');
 			tempElm.value = document.getElementById("OutputTextBox").textContent;
@@ -12,8 +15,10 @@ document.addEventListener("DOMContentLoaded",
 			document.body.removeChild(tempElm);
 		});
 
-		document.querySelector("#letterhide").addEventListener("click", function () {
-			var row = document.getElementById("rowforletterbox");
+
+		// Letter list hide/show button
+		document.querySelector("#hidebtn").addEventListener("click", function () {
+			var row = document.querySelector('div#rowforletterbox');
 
 			if (row.style.display === "block") {
 				row.style.display = "none";
@@ -23,34 +28,8 @@ document.addEventListener("DOMContentLoaded",
 
 		});
 
-		// var isHidden = false;
 
-		// function letterHide (event) {
-
-		// 	var isHidden = window.isHidden;
-
-		// 	if (isHidden === true) {
-		// 		document.getElementById("rowforletters").style.display="block"
-		// 		isHidden = false;
-		// 		console.log(isHidden);
-		// 	} else {
-		// 		document.getElementById("rowforletters").style.display="none"
-		// 		window.isHidden = true;
-		// 	}
-		// }
-
-		// function hideshow (event) {
-
-		// 	var row = document.getElementById("rowforletterbox");
-
-		// 	 if (row.style.display === "none") {
-		// 		    row.style.display = "block";
-		// 		  } else {
-		// 		    row.style.display = "none";
-		// 		  }
-		// }
-
-
+		// Transliterating LA > MA
 		function TL (event) {
 			var inputText = document.getElementById("input").value;
 			var outputText = new Array();
@@ -215,7 +194,7 @@ document.addEventListener("DOMContentLoaded",
 		document.querySelector("button#tl")
 				.addEventListener("click", TL);
 
-		// document.querySelector("button#letterhide")
+		// document.querySelector("button#hidebtn")
 		// 		.addEventListener("click", hideshow());
 
 
