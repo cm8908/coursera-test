@@ -9,7 +9,7 @@ p {
 }
 
 ul {
-	margin-top: 50px;
+
 }
 
 /*container for the whole line*/
@@ -39,7 +39,6 @@ ul {
 	border: 2px solid black;
 }
 
-#lettercpy:click
 
 /*manchu character*/
 #lettercpy a {
@@ -60,6 +59,16 @@ ul {
 	float: left;
 }
 
+/*LETTER PUT HERE Textarea*/
+#letterputhere {
+	width: 100%;
+	font-size: 2em;
+}
+
+#con_letterputhere {
+	width: 100%;
+}
+
 .row {
 	width: 90%;
 	margin: 0;
@@ -68,8 +77,13 @@ ul {
 }
 
 #copybtn {
-	position: relative;
-	top: 5px;
+/*	position: relative;
+	top: 5px;*/
+	margin: 5px;
+}
+
+#clearbtn2 {
+	margin-left: 10px;
 }
 
 #BoxContainer {
@@ -96,8 +110,8 @@ ul {
 	text-align: center;
 	width: 100%;
 	height: 100px;
-	position: relative;
-	top: 20px;
+/*	position: relative;
+	top: 20px;*/
 }
 
 #input {
@@ -106,6 +120,7 @@ ul {
 }
 
 button {
+
 }
 
 @media (min-width: 992px) {

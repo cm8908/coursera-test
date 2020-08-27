@@ -15,51 +15,54 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-5" id="BoxContainer"><textarea id="input"></textarea></div>
-			<div class="col-lg-2" id="BoxContainer"><button id="tl">Latin > Manchu</button><br><button id="copybtn">Copy Manchu</button></div>
+			<div class="col-lg-2" id="BoxContainer"><button id="tl">Latin > Manchu</button><br><button id="copybtn">Copy Manchu</button><button id="clearbtn">Clear</button></div>
 			<div class="col-lg-5 thirdbox" id="BoxContainer"><div id="OutputTextBox">Output Here</div></div>
 		</div>
 		<div class="row"><button id="hidebtn">Hide/Show</button></div>
 
 
 		<div class="row" id="rowforletterbox">
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᠠ</a></div><div id="latinlit">a</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡝ</a></div><div id="latinlit">e</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡳ</a></div><div id="latinlit">i</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᠣ</a></div><div id="latinlit">o</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡠ</a></div><div id="latinlit">u</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡡ</a></div><div id="latinlit">ū / v / uu</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᠨ</a></div><div id="latinlit">n</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᠩ</a></div><div id="latinlit">ng</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡴ</a></div><div id="latinlit">k</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡤ</a></div><div id="latinlit">g</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡥ</a></div><div id="latinlit">h</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᠪ</a></div><div id="latinlit">b</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡦ</a></div><div id="latinlit">p</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᠰ</a></div><div id="latinlit">s</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡧ</a></div><div id="latinlit">š / x / sh</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡨ</a></div><div id="latinlit">t</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡩ</a></div><div id="latinlit">d</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᠯ</a></div><div id="latinlit">l</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᠮ</a></div><div id="latinlit">m</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᠴ</a></div><div id="latinlit">c</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᠵ</a></div><div id="latinlit">j</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᠶ</a></div><div id="latinlit">y</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡵ</a></div><div id="latinlit">r</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡶ</a></div><div id="latinlit">f</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᠸ</a></div><div id="latinlit">w</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᠺ</a></div><div id="latinlit">k' / kh</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡬ</a></div><div id="latinlit">g' / gh</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡭ</a></div><div id="latinlit">h' / hh</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡮ</a></div><div id="latinlit">ts'</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡮᡟ</a></div><div id="latinlit">ts</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡯ</a></div><div id="latinlit">dz</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡰ</a></div><div id="latinlit">ž / z</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᠰᡟ</a></div><div id="latinlit">sy</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡱ</a></div><div id="latinlit">c' / ch</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡱᡳ</a></div><div id="latinlit">c'y / chi</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡷ</a></div><div id="latinlit">zh</div></div>
-			<div id="letterbox" class="letterbox"><div id="lettercpy"><a>ᡷᡳ</a></div><div id="latinlit">jy / zhi</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᠠ" id="lettercpy"><a>ᠠ</a></div><div id="latinlit">a</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡝ" id="lettercpy"><a>ᡝ</a></div><div id="latinlit">e</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡳ" id="lettercpy"><a>ᡳ</a></div><div id="latinlit">i</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᠣ" id="lettercpy"><a>ᠣ</a></div><div id="latinlit">o</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡠ" id="lettercpy"><a>ᡠ</a></div><div id="latinlit">u</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡡ" id="lettercpy"><a>ᡡ</a></div><div id="latinlit">ū / v / uu</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᠨ" id="lettercpy"><a>ᠨ</a></div><div id="latinlit">n</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᠩ" id="lettercpy"><a>ᠩ</a></div><div id="latinlit">ng</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡴ" id="lettercpy"><a>ᡴ</a></div><div id="latinlit">k</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡤ" id="lettercpy"><a>ᡤ</a></div><div id="latinlit">g</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡥ" id="lettercpy"><a>ᡥ</a></div><div id="latinlit">h</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᠪ" id="lettercpy"><a>ᠪ</a></div><div id="latinlit">b</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡦ" id="lettercpy"><a>ᡦ</a></div><div id="latinlit">p</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᠰ" id="lettercpy"><a>ᠰ</a></div><div id="latinlit">s</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡧ" id="lettercpy"><a>ᡧ</a></div><div id="latinlit">š / x / sh</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡨ" id="lettercpy"><a>ᡨ</a></div><div id="latinlit">t</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡩ" id="lettercpy"><a>ᡩ</a></div><div id="latinlit">d</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᠯ" id="lettercpy"><a>ᠯ</a></div><div id="latinlit">l</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᠮ" id="lettercpy"><a>ᠮ</a></div><div id="latinlit">m</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᠴ" id="lettercpy"><a>ᠴ</a></div><div id="latinlit">c</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᠵ" id="lettercpy"><a>ᠵ</a></div><div id="latinlit">j</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᠶ" id="lettercpy"><a>ᠶ</a></div><div id="latinlit">y</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡵ" id="lettercpy"><a>ᡵ</a></div><div id="latinlit">r</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡶ" id="lettercpy"><a>ᡶ</a></div><div id="latinlit">f</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᠸ" id="lettercpy"><a>ᠸ</a></div><div id="latinlit">w</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᠺ" id="lettercpy"><a>ᠺ</a></div><div id="latinlit">k' / kh</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡬ" id="lettercpy"><a>ᡬ</a></div><div id="latinlit">g' / gh</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡭ" id="lettercpy"><a>ᡭ</a></div><div id="latinlit">h' / hh</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡮ" id="lettercpy"><a>ᡮ</a></div><div id="latinlit">ts'</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡮᡟ" id="lettercpy"><a>ᡮᡟ</a></div><div id="latinlit">ts</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡯ" id="lettercpy"><a>ᡯ</a></div><div id="latinlit">dz</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡰ" id="lettercpy"><a>ᡰ</a></div><div id="latinlit">ž / z</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᠰᡟ" id="lettercpy"><a>ᠰᡟ</a></div><div id="latinlit">sy</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡱ" id="lettercpy"><a>ᡱ</a></div><div id="latinlit">c' / ch</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡱᡳ" id="lettercpy"><a>ᡱᡳ</a></div><div id="latinlit">c'y / chi</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡷ" id="lettercpy"><a>ᡷ</a></div><div id="latinlit">zh</div></div>
+			<div id="letterbox" class="letterbox"><div char_attr="ᡷᡳ" id="lettercpy"><a>ᡷᡳ</a></div><div id="latinlit">jy / zhi</div></div>
+			<div id="con_letterputhere"><textarea id="letterputhere"></textarea></div>
+			<button id="copybtn2">Copy</button><button id="clearbtn2">Clear</button>
 		</div>
+
 
 		<div id="FootList" class="row">
 			<ul>

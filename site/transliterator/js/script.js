@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded",
 
 
 
-		// Manchu output copy button
+		// Manchu output COPY button
 		document.querySelector("#copybtn").addEventListener("click", function() {
 			var tempElm = document.createElement('textarea');
 			tempElm.value = document.getElementById("OutputTextBox").textContent;
@@ -14,6 +14,52 @@ document.addEventListener("DOMContentLoaded",
 			document.execCommand("copy");
 			document.body.removeChild(tempElm);
 		});
+
+		//Below COPY button
+		document.querySelector("#copybtn2").addEventListener("click", function() {
+			var tempElm = document.createElement('textarea');
+			tempElm.value = document.getElementById("letterputhere").value;
+			document.body.appendChild(tempElm);
+
+			tempElm.select();
+			document.execCommand("copy");
+			document.body.removeChild(tempElm);
+		});
+
+		//Manchu output CLEAR button
+		document.querySelector("#clearbtn").addEventListener("click", function() {
+			document.querySelector("#OutputTextBox").textContent = "";
+		});
+
+		//Below CLEAR button
+		document.querySelector("#clearbtn2").addEventListener("click", function() {
+			document.querySelector("#letterputhere").value = "";
+		});
+
+
+		// Copying letter from the list
+		var manchu = new Array("ᠠ", "ᡝ", "ᡳ", "ᠣ", "ᡠ", "ᡡ", "ᠨ", "ᠩ", "ᡴ", "ᡤ", "ᡥ", "ᠪ", "ᡦ", "ᠰ", "ᡧ", "ᡨ", "ᡩ", "ᠯ", "ᠮ", "ᠴ", "ᠵ", "ᠶ", "ᡵ", "ᡶ", "ᠸ", "ᠺ", "ᡬ", "ᡭ", "ᡮ", "ᡮᡟ", "ᡯ", "ᡰ", "ᠰᡟ", "ᡱ", "ᡱᡳ", "ᡷ", "ᡷᡳ");
+		console.log(manchu.length);
+		for (var i = 0; i<manchu.length; i++) {
+
+			document.querySelector("[char_attr='"+ manchu[i] +"']").addEventListener("click", function() {
+				// var tempElm = document.createElement('textarea');
+				var tempElm = document.querySelector("#letterputhere");
+				tempElm.value += $(this).attr("char_attr");
+
+				if (document.querySelector("#OutputTextBox").textContent === "Output Here") {
+					document.querySelector("#OutputTextBox").textContent = "";
+				}
+				document.querySelector("#OutputTextBox").textContent += $(this).attr("char_attr");
+				console.log($(this).attr("char_attr"));
+				// document.body.appendChild(tempElm);
+
+				// tempElm.select();
+				// document.execCommand("copy");
+				// document.body.removeChild(tempElm);
+			});
+
+		}
 
 
 		// Letter list hide/show button
@@ -40,7 +86,7 @@ document.addEventListener("DOMContentLoaded",
 				} else if (inputText[i] == " ") {
 					outputText[i] = " ";
 				} else if (inputText[i] == "\n") {
-					outputText[i] = " ";
+					outputText[i] = "\n";
 				} else if (inputText[i] == ".") {
 					outputText[i] = "᠉";
 				} else if (inputText[i] == ",") {
@@ -200,7 +246,7 @@ document.addEventListener("DOMContentLoaded",
 
 		window.addEventListener("keyup", function(event) {
 			if (event.keyCode == 13) {
-				document.querySelector("button").click();
+				document.querySelector("button#tl").click();
 			}
 		});
 
